@@ -1,8 +1,13 @@
 {
-  "name": "pushapp",
-  "version": "0.0.1",
-  "private": false,
-  "dependencies": {
-    "express": "*",
-      "ejs": "*"  }
+    "name": "pushapp",
+    "version": "0.0.1",
+    "private": false,
+    "dependencies": {
+        "express": "*",
+        "ejs": "*",
+        "redis": "*",
+        "passport": "*",
+        "passport-local": "*",
+        "connect-flash": "*"
+    }
 }

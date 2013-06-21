@@ -6,7 +6,7 @@
 <body>
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="span3" >
+        <div class="span3">
             <!--Sidebar content-->
             <ul id="clientList" class="nav nav-list" style="overflow: auto;position: relative;height: 600px;">
 
@@ -15,20 +15,33 @@
         <div class="span9">
             <!--Body content-->
             <div class="hero-unit">
-             <!--   <h1>你看到了一个图表</h1>
-                <p>apiKey</p>
-                <p>xxxxxxxxxxxxxx</p>-->
+                <!--   <h1>你看到了一个图表</h1>
+                   <p>apiKey</p>
+                   <p>xxxxxxxxxxxxxx</p>-->
+                <% if(user){%>
+                <p><%= user.id%></p>
+
+                <p><%= user.username%></p>
+
+                <p><%= user.password%></p>
+
+                <p><%= user.email%></p>
+                <% } %>
+                <p id="pushApiKey">xxx-xx--xx-xx</p>
 
                 <p id="pushMsgTip"></p>
+
+                <p id="pushDebug"></p>
             </div>
             <div class="row-fluid input-prepend input-append">
                 <span class="add-on">@</span>
-                <input class="span2" id="prependedInput" type="text" placeholder="Username">
-                <button class="btn" type="button" onclick="pushAllmsg($('#pushMsg').val(), 'xxx-xx--xx-xx')">Go!</button>
+                <input class="input-xlarge" id="pushClient" value="all" type="text" placeholder="all" disabled>
+                <button class="btn" type="button" onclick="pushMsgToClient($('#pushMsg').val(), $('#pushApiKey').text(), $('#pushClient').val())">Go!
+                </button>
             </div>
 
 
-            <textarea rows="9" id="pushMsg" style="width: 100%;"></textarea>
+            <textarea rows="9" id="pushMsg" style="width: 100%;">Hello world!</textarea>
 
         </div>
     </div>

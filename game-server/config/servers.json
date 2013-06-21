@@ -1,10 +1,10 @@
 {
   "development":{
     "sio-connector": [
-    {"id": "sio-connector-server-client", "host": "127.0.0.1", "port": 3150, "clientPort": 3010, "frontend": true}
+    {"id": "sio-connector-server-client", "host": "192.168.1.107", "port": 3150, "clientPort": 3010, "frontend": true}
     ],
      "hybrid-connector": [
-          {"id": "connector-server-client", "host": "127.0.0.1", "port": 3151, "clientPort": 3011, "frontend": true}
+          {"id": "connector-server-client", "host": "192.168.1.107", "port": 3151, "clientPort": 3011, "frontend": true}
       ],
     "pushserver" : [ {"id": "push-server-1", "host": "127.0.0.1","port": 3152}  ]
   },

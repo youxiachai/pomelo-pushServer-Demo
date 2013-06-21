@@ -24,3 +24,9 @@ windows 环境你需要安装:
 3. 进入web-server 目录运行 `node app`
 
 如果在安装 pomelo 过程中出现各种错误,请自行google.
+
+
+##支持本项目##
+如果你愿意支持一下本项目,没有什么比捐点线实在了...
+
+[![](pay_encourage.png)](http://me.alipay.com/youxilua)
