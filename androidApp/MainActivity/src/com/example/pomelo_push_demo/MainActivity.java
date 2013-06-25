@@ -18,10 +18,11 @@ import com.netease.pomelo.PomeloClient;
 public class MainActivity extends Activity {
 	PomeloClient client;
 
-	//public static String currentHost = "42.121.117.150";
-	public static String currentHost = "192.168.1.107";
+	public static String CURRENTHOST = "42.121.117.150";
+//	public static String currentHost = "192.168.1.107";
 	//http://42.121.117.150:3001/dashboard
-	public static int currentPort = 3010;
+	public static int CURRENTPort = 3010;
+	public static final String APIKEY = "0aada7a0-dd93-11e2-a5a5-2726305d545e";
 
 	TextView tv1;
 	@Override
@@ -29,16 +30,23 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		tv1 = (TextView) findViewById(R.id.textView1);
+		
+		TextView host = (TextView) findViewById(R.id.host);
+		host.setText(CURRENTHOST);
+		
+		TextView apiKey = (TextView) findViewById(R.id.apikey);
+		apiKey.setText(APIKEY);
+		
 		findViewById(R.id.button2).setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.putExtra(PomeloPushServer.HOST, currentHost);
-				intent.putExtra(PomeloPushServer.PORT, currentPort);
+				intent.putExtra(PomeloPushServer.HOST, CURRENTHOST);
+				intent.putExtra(PomeloPushServer.PORT, CURRENTPort);
 				//0aada7a0-dd93-11e2-a5a5-2726305d545e
-				intent.putExtra(PomeloPushServer.APIKEY, "3eb6f3f0-dd91-11e2-81ae-45c2f2ee5739");
+				intent.putExtra(PomeloPushServer.APIKEY, APIKEY);
 				PomeloPushServer.start(MainActivity.this, intent);
 			}
 			

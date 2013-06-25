@@ -16,16 +16,37 @@
             android:layout_centerVertical="true"
             android:text="start pomelo push server" />
 
-        <TextView
-            android:id="@+id/textView1"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="34dp"
-            android:text="未连接"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-        
-        
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="未连接服务器"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/apikey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:text="TextView" />
+        </LinearLayout>
 
 </RelativeLayout>
