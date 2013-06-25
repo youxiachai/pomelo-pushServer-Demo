@@ -28,19 +28,18 @@ var authFilter = function (msg, session, next) {
     if (msg.role === 'server') {
         var user = new UserModel();
         user.load(msg.userId, function (err, data) {
-                    if (err) {
-                        var error = new Error(err + '');
-                        console.log(err);
+            if (err) {
+                var error = new Error(err + '');
+                console.log(err);
                 next(error);
             } else {
 
                 if (data.password === (msg.password)) {
-                    console.log('error-> password');
+                    console.log('password -> ok');
                     next();
                 } else {
-                    console.log('invail password');
-                    var error = new Error('invail password');
-                    next(error);
+                    console.log('invalid password');
+                    next(new Error('invalid password'));
                 }
             }
         });

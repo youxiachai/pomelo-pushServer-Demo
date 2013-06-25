@@ -70,18 +70,11 @@ PushRemote.prototype.pushAll = function (msg, next) {
     pushMsg.pushMessage('onMsg', {msg: msg.msg}, function (err) {
         if (err) {
             console.log(err);
+            next(null, {code: 200, msg: err});
         } else {
             console.log('push ok');
             next(null, {code: 200, msg: 'push is ok.'});
         }
     });
-//    var server = [{uid: "android device1", sid: "connector-server-client"}];
-//    this.channelService.pushMessageByUids('onMsg', {msg: "push ok"},server, function(err){
-//        if(err){
-//            console.log(err);
-//            return;
-//        }
-//    });
-
 };
 

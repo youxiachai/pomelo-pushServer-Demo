@@ -8,14 +8,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-
-        
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="set Host Port" />
-   
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="start pomelo push server" />
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:text="未连接"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
 
 </RelativeLayout>

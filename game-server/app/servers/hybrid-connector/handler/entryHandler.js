@@ -32,9 +32,9 @@ Handler.prototype.enter = function (msg, session, next) {
         console.log('rel' + uid);
         next(null, {
             code: 500,
-            error: true
+            error: 'session duplicate log in',
+            users: []
         });
-        return;
     }
     // seesion 与 客户端进行绑定操作.
     session.bind(uid);
