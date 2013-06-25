@@ -41,7 +41,7 @@ Handler.prototype.enter = function (msg, session, next) {
     session.on('closed', onUserLeave.bind(null, this.app, uuid));
     this.app.rpc.pushserver.pushRemote.add(session, uid, role, this.app.get('serverId'), uuid, function (err, users) {
         if (err) {
-            console.log(err);
+            console.log('error-->' + err);
             return;
         }
         if (users) {

@@ -13,7 +13,7 @@ import com.netease.pomelo.PomeloClient;
 public class MainActivity extends Activity {
 	PomeloClient client;
 
-	public static String currentHost = "42.121.117.150";
+	public static String currentHost = "192.168.1.107";
 	//http://42.121.117.150:3001/dashboard
 	public static int currentPort = 3010;
 
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent();
 				intent.putExtra(PomeloPushServer.HOST, currentHost);
 				intent.putExtra(PomeloPushServer.PORT, currentPort);
-				intent.putExtra(PomeloPushServer.APIKEY, "8940dc40-dd8e-11e2-89dd-b330ee18e84b");
+				intent.putExtra(PomeloPushServer.APIKEY, "3eb6f3f0-dd91-11e2-81ae-45c2f2ee5739");
 				PomeloPushServer.start(MainActivity.this, intent);
 			}
 			

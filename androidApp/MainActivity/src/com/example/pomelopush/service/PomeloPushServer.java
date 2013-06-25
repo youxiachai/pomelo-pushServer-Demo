@@ -61,14 +61,20 @@ public class PomeloPushServer extends Service {
 		super.onDestroy();
 		if(client != null){
 			client.disconnect();
+			client = null;
 		}
 	}
 	
 	public void initPomelo(String apiKey, String host, int port){
 		Log.d("xx", "start callback-->");
-		client = new PomeloClient(host, port);
-		client.init();
 		
+		if(client == null){
+			client = new PomeloClient(host, port);
+		}else{
+			client.disconnect();
+			client = new PomeloClient(host, port);
+		}
+		client.init();
 		onMsgListener();
 		String route = "sio-connector.entryHandler.enter";
 		JSONObject jb = new JSONObject();
@@ -86,6 +92,7 @@ public class PomeloPushServer extends Service {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		
 	}
 	
