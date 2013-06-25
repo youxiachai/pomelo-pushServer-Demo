@@ -1,5 +1,16 @@
 #基于Pomelo 的推送演示demo#
 
+在线演示
+[http://42.121.117.150:3001](http://42.121.117.150:3001/dashboard)
+
+用户名: demo
+
+密码: demo
+
+客户端连接使用 apiKey
+
+**界面就不要吐槽了..**
+
 android 客户端在
 `/androidApp/Pomelo-push-demo` 支持gradle 构建
 
