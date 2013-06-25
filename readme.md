@@ -18,7 +18,11 @@ android 客户端在
 
 **需要注意**
 
-如果,编译过程出现,编码错误,需要手动设置jdk的编码环境,在环境变量里面加上`JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8`
+如果,编译过程出现,编码错误,需要手动设置jdk的编码环境,在环境变量里面加上
+
+name: `JAVA_TOOL_OPTIONS`
+
+value: `-Dfile.encoding=UTF-8`
 
 
 ##服务端##
