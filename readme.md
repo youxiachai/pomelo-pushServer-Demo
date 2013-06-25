@@ -1,15 +1,19 @@
 #基于Pomelo 的推送演示demo#
 
-在线演示
+##在线演示##
 [http://goo.gl/R4kKL](http://goo.gl/R4kKL)
 
+##说明文章##
+[http://blog.gfdsa.net/2013/06/17/pomelo_study_appserver/](http://blog.gfdsa.net/2013/06/17/pomelo_study_appserver/)
+
+##测试用账号##
 用户名: demo
 
 密码: demo
 
 客户端连接使用 apiKey
 
-**界面就不要吐槽了..**
+**界面就不要吐槽了..ps: 直接点击apikey 可以跳转到web client 看推送效果**
 
 android 客户端在
 `/androidApp/Pomelo-push-demo` 支持gradle 构建
