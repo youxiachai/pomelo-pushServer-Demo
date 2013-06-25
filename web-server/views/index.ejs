@@ -43,20 +43,59 @@
   <body>
   <div class="container">
 
-      <form class="form-signin" action="/signin" method="post">
+      <form class="form-signin" id="signIn" action="/signin" method="post" onsubmit="doSubmit();">
           <h2 class="form-signin-heading">请登录</h2>
           <h3 class="text-error"><%=message %></h3>
           <input type="text" placeholder="用户名" class="input-block-level" name="username">
-          <input type="password" placeholder="密码" class="input-block-level" name="password">
-          <label class="checkbox">
+          <input type="password" id="password" placeholder="密码" class="input-block-level" name="password" >
+         <!-- <label class="checkbox">
               <input type="checkbox" name="remember"> 记住我
-          </label>
+          </label> -->
           <button type="submit" class="btn btn-large btn-primary">登录</button>
+          <a class="btn btn-large btn-success" role="button" data-toggle="modal" href="#signup">注册</a>
       </form>
 
   </div>
 
+
+  <!-- Modal -->
+  <div id="signup" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3>用户注册:<span>所有字段都必填</span></h3>
+      </div>
+
+      <form class="form-horizontal" method="post" action="/signUp" style="margin-top: 10px">
+          <div class="control-group">
+              <label class="control-label" for="inputUserName">用户名</label>
+              <div class="controls">
+                  <input type="text" id="inputUserName" name="username" placeholder="username">
+              </div>
+          </div>
+          <div class="control-group">
+              <label class="control-label" for="inputPassword">密码</label>
+              <div class="controls">
+                  <input type="password" id="inputPassword" name="password" placeholder="Password">
+              </div>
+          </div>
+          <div class="control-group">
+              <div class="controls">
+                  <button type="submit" class="btn">注册</button>
+              </div>
+          </div>
+      </form>
+  </div>
+  <script src="/public/js/md5.min.js"></script>
   <script src="/public/js/jquery.js"></script>
   <script src="/public/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+      function doSubmit(){
+          var value = document.getElementById("password").value;
+          document.getElementById("password").value = md5(value);
+      };
+
+  </script>
   </body>
 </html>

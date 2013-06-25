@@ -2,3 +2,4 @@
 /game-server/logs
 /web-server/node_modules
 /.idea
+shared/.metadata

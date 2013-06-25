@@ -8,6 +8,9 @@
         "redis": "*",
         "passport": "*",
         "passport-local": "*",
-        "connect-flash": "*"
+        "connect-flash": "*",
+        "nohm": "*",
+        "uuid": "*",
+        "popularcrypto": "*"
     }
 }

@@ -15,19 +15,11 @@
         <div class="span9">
             <!--Body content-->
             <div class="hero-unit">
-                <!--   <h1>你看到了一个图表</h1>
-                   <p>apiKey</p>
-                   <p>xxxxxxxxxxxxxx</p>-->
-                <% if(user){%>
-                <p><%= user.id%></p>
 
-                <p><%= user.username%></p>
+                <p><%= user.username %></p>
 
-                <p><%= user.password%></p>
+                <p id="pushApiKey"><%= user.accessToken%></p>
 
-                <p><%= user.email%></p>
-                <% } %>
-                <p id="pushApiKey">xxx-xx--xx-xx</p>
 
                 <p id="pushMsgTip"></p>
 
@@ -47,6 +39,8 @@
     </div>
 </div>
 
+<p id="password" style="visibility: hidden" ><%=user.password%></p>
+<p id="userId" style="visibility: hidden" ><%=user.id%></p>
 <% include ./common/bodyFooter%>
 </body>
 </html>
