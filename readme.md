@@ -1,7 +1,7 @@
 #基于Pomelo 的推送演示demo#
 
 在线演示
-[http://42.121.117.150:3001](http://42.121.117.150:3001/dashboard)
+[http://goo.gl/R4kKL](http://goo.gl/R4kKL)
 
 用户名: demo
 
