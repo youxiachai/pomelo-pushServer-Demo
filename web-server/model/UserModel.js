@@ -71,7 +71,9 @@ module.exports = nohm.model('User', {
                 if (err) {
                     cb({errors: this.errors, saveError: err}, null);
                 } else {
-                    cb(null, this.allProperties());
+                    var allmember = this.allProperties();
+                    allmember.password = cryptoUtils.md5(allmember.password);
+                    cb(null, allmember);
                 }
             });
         }

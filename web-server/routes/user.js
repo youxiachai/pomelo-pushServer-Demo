@@ -30,6 +30,7 @@ var signUpUser = function (req, res) {
             console.log(err);
             res.render('index', {message: err.saveError });
         } else {
+            console.log(data);
             res.render('dashboard', {user: data});
         }
     });
