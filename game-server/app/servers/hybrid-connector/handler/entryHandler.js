@@ -30,11 +30,20 @@ Handler.prototype.enter = function (msg, session, next) {
     //duplicate log in
     if (!!sessionService.getByUid(uid)) {
         console.log('rel' + uid);
-        next(null, {
-            code: 500,
-            error: 'session duplicate log in',
-            users: []
+        this.app.rpc.pushserver.pushRemote.add(session, uid, role, this.app.get('serverId'), uuid, function (err, users) {
+            if (err) {
+                console.log('error-->' + err);
+                return;
+            }
+            if (users) {
+                //发回给web management 的消息
+                next(null, {code: 200, msg: 'push server is ok.', users: users});
+            } else {
+                //
+                next(null, {code: 500, msg: "server error", users: users});
+            }
         });
+        return;
     }
     // seesion 与 客户端进行绑定操作.
     session.bind(uid);
