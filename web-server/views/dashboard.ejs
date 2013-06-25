@@ -17,8 +17,8 @@
             <div class="hero-unit">
                 <fieldset>
                     <legend><%= user.username %></legend>
-                    <span class="help-block">ApiKey:<span style="padding-left: 1em" id="pushApiKey"><%= user.accessToken%></span></span>
-                    <span class="help-block">server status: <span id="pushMsgTip" class="text-success"></span> </span>
+                    <span class="help-block">ApiKey:<a style="padding-left: 1em" id="pushApiKey" href="http://youxibook.duapp.com/index.html?apikey=<%= user.accessToken%>" target="_blank"><%= user.accessToken%></a></span>
+                    <span class="help-block">server status: <span id="pushMsgTip" class="text-success">not server connect</span> </span>
                 </fieldset>
 
             </div>
@@ -34,9 +34,9 @@
             </div>
             <fieldset>
                 <label>Message Title</label>
-                <input type="text" id="pushMsgTitle" placeholder="message title">
+                <input type="text" id="pushMsgTitle" value='Hi!' placeholder="message title">
                 <label>Message Context</label>
-                <textarea rows="9" id="pushMsg" style="width: 100%;" placeholder="message body"></textarea>
+                <textarea rows="9" id="pushMsg" style="width: 100%;"  placeholder="message body">Send Message</textarea>
             </fieldset>
         </div>
     </div>

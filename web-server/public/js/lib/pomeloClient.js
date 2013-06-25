@@ -93,7 +93,7 @@ $(document).ready(function () {
 /**
  * 监听 a 标签 click 事件
  */
-$(document).on('click', 'a', function () {
+$(document).on('click', 'li a', function () {
     console.log($(this).text());
     $('#pushClient').val($(this).text());
 });
@@ -132,7 +132,17 @@ var pushMsgClientId = function (msg, apikey, clientId) {
  * @param clientId
  */
 var pushMsgToClient = function (msg, apikey, clientId) {
-    // console.log(msg + apikey + clientId);
+     console.log(msg);
+    if(msg.title === ""){
+        alert('Please Input Title');
+        return;
+    }
+
+    if(msg.msg === "") {
+        alert('Please Input Message');
+        return;
+    }
+
     if (clientId === 'all') {
         pushMsgAll(msg, apikey);
     } else {
