@@ -25,6 +25,11 @@ PushRemote.prototype.getUsers = function (name) {
         //获得推送客户端
         users = channel.getMembers();
     }
+    for(var i in users){
+        if(!users[i]){
+            users.splice(i);
+        }
+    }
     return users;
 };
 
